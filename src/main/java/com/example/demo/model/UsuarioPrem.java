@@ -1,13 +1,14 @@
 package com.example.demo.model;
-import com.example.demo.model.UsuarioAbs;
-import com.example.demo.model.VehiculoAbs;
-import com.example.demo.model.TipoPago;
+
 import lombok.*;
+import java.util.UUID;
 
 @Getter
 @ToString
 
 public class UsuarioPrem extends UsuarioAbs {
+    private TipoPago tipoPago;
+    private double saldo;
 
     public UsuarioPrem(UUID id, String nombre, TipoPago tipoPago, double saldo) {
         super(id, nombre);
@@ -16,13 +17,13 @@ public class UsuarioPrem extends UsuarioAbs {
     }
 
     public void realizarPago(TipoPago tipoPago) {
-        if (tipoPago == TipoPago.Tarjeta) {
+        if (tipoPago == TipoPago.TARJETA) {
             // Lógica para procesar el pago con tarjeta de crédito
-        } else if (tipoPago == TipoPago.PAYPAL) {
+        } else if (tipoPago == TipoPago.VIRTUAL) {
             // Lógica para procesar el pago con PayPal
-        } else if (tipoPago == TipoPago.SALDO) {
-            // Lógica para procesar el pago con saldo
         }
+    }
+
     public double descontarTarifa(VehiculoAbs tarifa) {
         double saldoActual = this.saldo;
 

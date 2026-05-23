@@ -3,7 +3,6 @@ import java.util.UUID;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.ToString;
-import com.example.demo.model.TipoPago;
 
 @Getter
 @EqualsAndHashCode(of="id")

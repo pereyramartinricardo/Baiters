@@ -1,10 +1,13 @@
 package com.example.demo.model;
-import com.example.demo.model.UsuarioAbs;
-import com.example.demo.model.TipoPago;
-import com.example.demo.model.VehiculoAbs;
-import java.util.UUID;
 
+import java.util.UUID;
+import lombok.*;
+@Getter
+@ToString
 public class UsuarioEstandar extends UsuarioAbs {
+    private TipoPago tipoPago;
+    private double saldo;
+
     public UsuarioEstandar(UUID id,String nombre, TipoPago tipoPago, double saldo) {
         super(id, nombre);
         this.tipoPago = tipoPago;

@@ -1,6 +1,8 @@
 package com.example.demo.model;
 
-import com.example.demo.model.VehiculoAbs;
+import lombok.*;
+@Getter
+@ToString
 
 public class BicicletaE extends VehiculoAbs {
     private double capacidad;
@@ -9,5 +11,4 @@ public class BicicletaE extends VehiculoAbs {
         super(patente, bateria, tarifa);
         this.capacidad = capacidad;
     }
-
 }
